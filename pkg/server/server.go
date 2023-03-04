@@ -3,6 +3,7 @@ package server
 
 import (
 	"context"
+	"errors"
 	"net/http"
 	"os"
 	"sync/atomic"
@@ -13,6 +14,7 @@ import (
 	"darvaza.org/darvaza/agent/httpserver"
 	"darvaza.org/darvaza/shared/storage"
 	"darvaza.org/darvaza/shared/storage/simple"
+	"darvaza.org/gossipcache"
 )
 
 // A Server to run a node of a GoShop microservice
@@ -24,8 +26,10 @@ type Server struct {
 	err       atomic.Value
 	wg        core.WaitGroup
 
+	lsn *Listeners
 	tls storage.Store
 	hs  *httpserver.Server
+	gc  *gossipcache.GossipCache
 }
 
 // New creates a new server using the given config
@@ -111,13 +115,6 @@ func (cfg *Config) newServer(s storage.Store) (*Server, error) {
 		tls:    s,
 	}
 
-	hsc := srv.newHTTPServerConfig()
-	hs, err := hsc.New()
-	if err != nil {
-		return nil, err
-	}
-
-	srv.hs = hs
 	return srv, nil
 }
 
@@ -184,8 +181,11 @@ func (srv *Server) Wait() error {
 	return srv.Err()
 }
 
+// revive:disable:cognitive-complexity
+
 // Spawn the workers
 func (srv *Server) Spawn(h http.Handler, healthy time.Duration) error {
+	// revive:enable:cognitive-complexity
 	var ok bool
 
 	defer func() {
@@ -194,7 +194,24 @@ func (srv *Server) Spawn(h http.Handler, healthy time.Duration) error {
 		}
 	}()
 
+	if srv.lsn == nil {
+		return errors.New("forgot to Listen?")
+	}
+
+	defer func() {
+		if !ok {
+			_ = srv.lsn.Close()
+		}
+	}()
+
+	// GossipCache
+	if err := srv.spawnGossipCacheServer(); err != nil {
+		return err
+	}
+
+	// HTTP
 	if err := srv.spawnHTTPServer(h); err != nil {
+		srv.cancelGossipCacheServer()
 		return err
 	}
 

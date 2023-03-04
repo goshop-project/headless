@@ -25,6 +25,7 @@ type Config struct {
 	Addresses   BindConfig        `toml:",omitempty"`
 	TLS         TLSConfig         `toml:"tls"`
 	HTTP        HTTPConfig        `toml:"http"`
+	Cache       CacheConfig       `toml:"cache"`
 }
 
 // SupervisionConfig represents how graceful upgrades will operate
@@ -36,8 +37,9 @@ type SupervisionConfig struct {
 
 // BindConfig refers to the IP addresses used by a GoShop Server
 type BindConfig struct {
-	Interfaces []string `toml:"interfaces"`
-	Addresses  []string `toml:"addresses" valid:"ip"`
+	Interfaces    []string `toml:"interfaces"`
+	Addresses     []string `toml:"addresses" valid:"ip"`
+	AdvertiseAddr string   `toml:"advertise,omitempty" valid:"ip"`
 }
 
 // TLSConfig contains information for setting up TLS clients and server
@@ -66,6 +68,14 @@ type HTTPConfig struct {
 	ReadHeaderTimeout time.Duration `toml:"read_header_timeout" default:"2s"`
 	WriteTimeout      time.Duration `toml:"write_timeout"       default:"1s"`
 	IdleTimeout       time.Duration `toml:"idle_timeout"        default:"30s"`
+}
+
+// CacheConfig contains information for setting up gossipcache
+type CacheConfig struct {
+	Port   uint16   `toml:"port"   valid:"port"             default:"7946" `
+	Peers  []string `toml:"peers"`
+	Secret string   `toml:"secret" valid:"base64,required"`
+	Path   string   `toml:"path"   valid:",required"        default:"/_groupcache"`
 }
 
 // SetDefaults fills the gaps in the Config

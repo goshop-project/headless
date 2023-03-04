@@ -20,3 +20,11 @@ func (srv *Server) getClientCAsForServer() func() *x509.CertPool {
 	}
 	return nil
 }
+
+func (*Server) getClientTLSConfig() *tls.Config {
+	return &tls.Config{}
+}
+
+func (*Server) getAcceptedRootCA() *x509.CertPool {
+	return x509.NewCertPool()
+}

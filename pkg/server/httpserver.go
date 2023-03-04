@@ -40,6 +40,18 @@ func (srv *Server) newHTTPServerConfig() *httpserver.Config {
 }
 
 func (srv *Server) spawnHTTPServer(h http.Handler) error {
+	hsc := srv.newHTTPServerConfig()
+	hs, err := hsc.New()
+	if err != nil {
+		return err
+	}
+
+	if err = hs.WithListeners(&srv.lsn.HTTP); err != nil {
+		return err
+	}
+
+	srv.hs = hs
+
 	srv.wg.Go(func() error {
 		return srv.hs.Serve(h)
 	})

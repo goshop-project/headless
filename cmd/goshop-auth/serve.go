@@ -34,6 +34,7 @@ var serveCmd = &cobra.Command{
 func init() {
 	cobra.NewMapper(serveCmd.Flags()).
 		VarP(&cfg.Server.HTTP.Port, "port", 'p', "HTTPS Port").
+		VarP(&cfg.Server.Cache.Port, "gossip-port", 'g', "GossipCache Port").
 		Var(&cfg.Server.Supervision.PIDFile, "pid", "Path to PID file").
 		VarP(&cfg.Server.Supervision.GracefulTimeout, "graceful", 't',
 			"Maximum time to wait for in-flight requests")

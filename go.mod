@@ -13,7 +13,10 @@ require (
 	github.com/darvaza-proxy/slog/handlers/zerolog v0.3.1
 	github.com/mgechev/revive v1.2.5
 	github.com/rs/zerolog v1.29.0
+	github.com/spf13/cobra v1.6.1
 	go.sancus.dev/config v0.11.0
+	go.sancus.dev/config/flags/cobra v0.1.0
+	go.sancus.dev/config/yaml v0.1.0
 )
 
 require (
@@ -27,6 +30,7 @@ require (
 	github.com/go-task/slim-sprig v0.0.0-20210107165309-348f09dbbbc0 // indirect
 	github.com/golang/mock v1.6.0 // indirect
 	github.com/google/pprof v0.0.0-20230309165930-d61513b1440d // indirect
+	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/klauspost/cpuid/v2 v2.2.4 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
 	github.com/mattn/go-isatty v0.0.17 // indirect
@@ -41,7 +45,9 @@ require (
 	github.com/quic-go/qtls-go1-20 v0.1.1 // indirect
 	github.com/quic-go/quic-go v0.33.0 // indirect
 	github.com/rivo/uniseg v0.4.4 // indirect
+	github.com/spf13/pflag v1.0.5 // indirect
 	github.com/zeebo/blake3 v0.2.3 // indirect
+	go.sancus.dev/config/expand v0.1.0 // indirect
 	go.sancus.dev/core v0.18.2 // indirect
 	golang.org/x/crypto v0.7.0 // indirect
 	golang.org/x/exp v0.0.0-20230310171629-522b1b587ee0 // indirect
@@ -50,4 +56,6 @@ require (
 	golang.org/x/sys v0.6.0 // indirect
 	golang.org/x/text v0.8.0 // indirect
 	golang.org/x/tools v0.7.0 // indirect
+	gopkg.in/yaml.v3 v3.0.1 // indirect
+	mvdan.cc/sh/v3 v3.6.0 // indirect
 )

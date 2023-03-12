@@ -1,4 +1,4 @@
-module goshop.dev/goshop
+module goshop.dev/headless
 
 go 1.19
 

@@ -1,5 +1,5 @@
-// Package logger provides the logger we use in our servers
-package logger
+// Package zerolog provides a zerolog based logger we use in our servers
+package zerolog
 
 import (
 	"github.com/darvaza-proxy/slog"

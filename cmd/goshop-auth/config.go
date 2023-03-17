@@ -5,8 +5,8 @@ import (
 	"os"
 
 	"github.com/spf13/cobra"
-	"go.sancus.dev/config/yaml"
 
+	"goshop.dev/headless/pkg/config"
 	"goshop.dev/headless/pkg/server"
 )
 
@@ -17,12 +17,12 @@ type Config struct {
 
 // ReadInFile loads the microservice configuration from a YAML file by name
 func (cfg *Config) ReadInFile(filename string) error {
-	return yaml.LoadFile(filename, cfg)
+	return config.LoadFile(filename, cfg)
 }
 
 // WriteTo writes out the Config
 func (cfg *Config) WriteTo(f io.Writer) (int64, error) {
-	return yaml.WriteTo(f, cfg)
+	return config.WriteTo(f, cfg)
 }
 
 // SetDefaults fills any gap in the Config

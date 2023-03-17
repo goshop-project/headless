@@ -5,6 +5,42 @@
 		},
 		{
 			"path": "../proto"
+		},
+		{
+			"path": "../../darvaza.org/darvaza/shared"
+		},
+		{
+			"path": "../../darvaza.org/darvaza/agent"
+		},
+		{
+			"path": "../../darvaza.org/darvaza/acme"
+		},
+		{
+			"path": "../../darvaza.org/cache"
+		},
+		{
+			"path": "../../darvaza.org/cache/x/groupcache"
+		},
+		{
+			"path": "../../darvaza.org/cache/x/memcache"
+		},
+		{
+			"path": "../../darvaza.org/cache/x/simplelru"
+		},
+		{
+			"path": "../../darvaza.org/core"
+		},
+		{
+			"path": "../../darvaza.org/gossipcache"
+		},
+		{
+			"path": "../../darvaza.org/acmefy"
+		},
+		{
+			"path": "../../darvaza.org/middleware"
+		},
+		{
+			"path": "../../darvaza.org/resolver"
 		}
 	],
 	"settings": {}

@@ -4,6 +4,8 @@ go 1.19
 
 replace goshop.dev/headless/pkg/config => ../config
 
+replace goshop.dev/proto/gen => ../../../proto/gen/go
+
 require (
 	darvaza.org/acmefy/pkg/ca v0.1.0
 	darvaza.org/core v0.9.2

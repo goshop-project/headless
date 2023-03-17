@@ -7,6 +7,8 @@ replace (
 	goshop.dev/headless/pkg/server => ../../pkg/server/
 )
 
+replace goshop.dev/proto/gen => ../../../proto/gen/go
+
 require (
 	darvaza.org/slog v0.5.1
 	github.com/spf13/cobra v1.7.0

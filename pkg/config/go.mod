@@ -2,6 +2,8 @@ module goshop.dev/headless/pkg/config
 
 go 1.19
 
+replace goshop.dev/proto/gen => ../../../proto/gen/go
+
 require (
 	github.com/BurntSushi/toml v1.2.1
 	github.com/amery/defaults v0.1.0

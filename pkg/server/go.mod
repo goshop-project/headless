@@ -4,6 +4,8 @@ go 1.19
 
 replace goshop.dev/headless/pkg/config => ../../pkg/config/
 
+replace goshop.dev/proto/gen => ../../../proto/gen/go
+
 require (
 	darvaza.org/core v0.9.2
 	darvaza.org/darvaza/agent v0.2.2

@@ -3,6 +3,7 @@ module goshop.dev/headless
 go 1.19
 
 require (
+	github.com/BurntSushi/toml v1.2.1
 	github.com/cloudflare/tableflip v1.2.3
 	github.com/darvaza-proxy/core v0.6.1
 	github.com/darvaza-proxy/darvaza/agent v0.1.2
@@ -14,10 +15,10 @@ require (
 	github.com/mgechev/revive v1.3.1
 	github.com/rs/zerolog v1.29.0
 	go.sancus.dev/config v0.11.0
+	go.sancus.dev/config/expand v0.1.0
 )
 
 require (
-	github.com/BurntSushi/toml v1.2.1 // indirect
 	github.com/asaskevich/govalidator v0.0.0-20230301143203-a9d515a09cc2 // indirect
 	github.com/chavacava/garif v0.0.0-20230227094218-b8c73b2037b8 // indirect
 	github.com/creasty/defaults v1.7.0 // indirect
@@ -50,4 +51,5 @@ require (
 	golang.org/x/sys v0.6.0 // indirect
 	golang.org/x/text v0.8.0 // indirect
 	golang.org/x/tools v0.7.0 // indirect
+	mvdan.cc/sh/v3 v3.6.0 // indirect
 )

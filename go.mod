@@ -4,14 +4,14 @@ go 1.19
 
 require (
 	github.com/cloudflare/tableflip v1.2.3
-	github.com/darvaza-proxy/core v0.5.3
-	github.com/darvaza-proxy/darvaza/agent v0.1.0
-	github.com/darvaza-proxy/darvaza/shared v0.4.1
-	github.com/darvaza-proxy/slog v0.4.5
-	github.com/darvaza-proxy/slog/handlers/discard v0.3.0
-	github.com/darvaza-proxy/slog/handlers/filter v0.3.0
-	github.com/darvaza-proxy/slog/handlers/zerolog v0.3.1
-	github.com/mgechev/revive v1.2.5
+	github.com/darvaza-proxy/core v0.6.1
+	github.com/darvaza-proxy/darvaza/agent v0.1.2
+	github.com/darvaza-proxy/darvaza/shared v0.4.3
+	github.com/darvaza-proxy/slog v0.4.6
+	github.com/darvaza-proxy/slog/handlers/discard v0.3.1
+	github.com/darvaza-proxy/slog/handlers/filter v0.3.1
+	github.com/darvaza-proxy/slog/handlers/zerolog v0.3.2
+	github.com/mgechev/revive v1.3.1
 	github.com/rs/zerolog v1.29.0
 	github.com/spf13/cobra v1.6.1
 	go.sancus.dev/config v0.11.0
@@ -23,9 +23,9 @@ require (
 	github.com/BurntSushi/toml v1.2.1 // indirect
 	github.com/asaskevich/govalidator v0.0.0-20230301143203-a9d515a09cc2 // indirect
 	github.com/chavacava/garif v0.0.0-20230227094218-b8c73b2037b8 // indirect
-	github.com/creasty/defaults v1.6.0 // indirect
+	github.com/creasty/defaults v1.7.0 // indirect
 	github.com/darvaza-proxy/darvaza/acme v0.0.2 // indirect
-	github.com/fatih/color v1.14.1 // indirect
+	github.com/fatih/color v1.15.0 // indirect
 	github.com/fatih/structtag v1.2.0 // indirect
 	github.com/go-task/slim-sprig v0.0.0-20210107165309-348f09dbbbc0 // indirect
 	github.com/golang/mock v1.6.0 // indirect
@@ -50,7 +50,7 @@ require (
 	go.sancus.dev/config/expand v0.1.0 // indirect
 	go.sancus.dev/core v0.18.2 // indirect
 	golang.org/x/crypto v0.7.0 // indirect
-	golang.org/x/exp v0.0.0-20230310171629-522b1b587ee0 // indirect
+	golang.org/x/exp v0.0.0-20230315142452-642cacee5cc0 // indirect
 	golang.org/x/mod v0.9.0 // indirect
 	golang.org/x/net v0.8.0 // indirect
 	golang.org/x/sys v0.6.0 // indirect

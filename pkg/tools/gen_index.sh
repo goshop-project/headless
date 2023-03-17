@@ -5,7 +5,7 @@ set -eu
 : ${GO:=go}
 
 MODULES=$(find * -name go.mod -exec dirname '{}' \;)
-GROUPS="x handlers"
+GROUPS="cmd pkg"
 BASE="$PWD"
 MODULE=$($GO list -m | head -n1)
 

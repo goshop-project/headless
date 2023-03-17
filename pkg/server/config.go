@@ -13,35 +13,35 @@ import (
 
 // Config represents the generic configuration for goshop servers
 type Config struct {
-	Logger  slog.Logger     `yaml:"-" valid:",required"`
-	Context context.Context `yaml:"-"`
+	Logger  slog.Logger     `toml:"-" valid:",required"`
+	Context context.Context `toml:"-"`
 
-	Name string `default:"nil.goshop.local" valid:"host,required"`
+	Name string `toml:"name" default:"nil.goshop.local" valid:"host,required"`
 
-	Supervision SupervisionConfig `yaml:"run"`
-	Addresses   BindConfig        `yaml:",omitempty"`
-	TLS         TLSConfig
-	HTTP        HTTPConfig
+	Supervision SupervisionConfig `toml:"run"`
+	Addresses   BindConfig        `toml:",omitempty"`
+	TLS         TLSConfig         `toml:"tls"`
+	HTTP        HTTPConfig        `toml:"http"`
 }
 
 // SupervisionConfig represents how graceful upgrades will operate
 type SupervisionConfig struct {
-	PIDFile         string        `yaml:"pid-file"         default:"/tmp/tableflip.pid"`
-	GracefulTimeout time.Duration `yaml:"graceful-timeout" default:"5s"`
-	HealthWait      time.Duration `yaml:"health-wait"      default:"1s"`
+	PIDFile         string        `toml:"pid_file"         default:"/tmp/tableflip.pid"`
+	GracefulTimeout time.Duration `toml:"graceful_timeout" default:"5s"`
+	HealthWait      time.Duration `toml:"health_wait"      default:"1s"`
 }
 
 // BindConfig refers to the IP addresses used by a GoShop Server
 type BindConfig struct {
-	Interfaces []string `yaml:"interfaces"`
-	Addresses  []string `yaml:"addresses" valid:"ip"`
+	Interfaces []string `toml:"interfaces"`
+	Addresses  []string `toml:"addresses" valid:"ip"`
 }
 
 // TLSConfig contains information for setting up TLS clients and server
 type TLSConfig struct {
-	Key   string
-	Cert  string
-	Roots string
+	Key   string `toml:"key"`
+	Cert  string `toml:"cert"`
+	Roots string `toml:"caroot"`
 }
 
 // Validate tells if the configuration is worth a try
@@ -54,14 +54,14 @@ func (c *TLSConfig) Validate() error {
 
 // HTTPConfig contains information for setting up the HTTP server
 type HTTPConfig struct {
-	Port              uint16        `yaml:"port"                default:"8443" valid:"port"`
-	InsecurePort      uint16        `yaml:"insecure-port"       default:"8080" valid:"port"`
-	EnableInsecure    bool          `yaml:"enable-insecure"`
-	MutualTLSOnly     bool          `yaml:"mtls-only"`
-	ReadTimeout       time.Duration `yaml:"read-timeout"        default:"1s"`
-	ReadHeaderTimeout time.Duration `yaml:"read-header-timeout" default:"2s"`
-	WriteTimeout      time.Duration `yaml:"write-timeout"       default:"1s"`
-	IdleTimeout       time.Duration `yaml:"idle-timeout"        default:"30s"`
+	Port              uint16        `toml:"port"                default:"8443" valid:"port"`
+	InsecurePort      uint16        `toml:"insecure_port"       default:"8080" valid:"port"`
+	EnableInsecure    bool          `toml:"enable_insecure"`
+	MutualTLSOnly     bool          `toml:"mtls_only"`
+	ReadTimeout       time.Duration `toml:"read_timeout"        default:"1s"`
+	ReadHeaderTimeout time.Duration `toml:"read_header_timeout" default:"2s"`
+	WriteTimeout      time.Duration `toml:"write_timeout"       default:"1s"`
+	IdleTimeout       time.Duration `toml:"idle_timeout"        default:"30s"`
 }
 
 // SetDefaults fills the gaps in the Config

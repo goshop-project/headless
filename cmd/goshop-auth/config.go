@@ -12,7 +12,7 @@ import (
 
 // Config is the configuration structure of this microservice
 type Config struct {
-	Server server.Config
+	Server server.Config `toml:"server"`
 }
 
 // ReadInFile loads the microservice configuration from a YAML file by name

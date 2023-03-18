@@ -15,7 +15,7 @@ const (
 	// CmdName is the name of the executable
 	CmdName = "goshop-auth"
 	// DefaultConfigFile is the default name for the ConfigFile
-	DefaultConfigFile = CmdName + ".yaml"
+	DefaultConfigFile = CmdName + ".toml"
 )
 
 var (
@@ -92,7 +92,7 @@ func init() {
 
 	// root level flags
 	pflags := rootCmd.PersistentFlags()
-	pflags.StringVarP(&cfgFile, "config-file", "f", DefaultConfigFile, "config file (YAML format)")
+	pflags.StringVarP(&cfgFile, "config-file", "f", DefaultConfigFile, "config file (TOML format)")
 
 	// load config-file before the rest of the cobra commands
 	cobra.OnInitialize(cobraInit)

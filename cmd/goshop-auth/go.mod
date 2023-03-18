@@ -9,8 +9,12 @@ require (
 	github.com/spf13/cobra v1.6.1
 	go.sancus.dev/config v0.11.0
 	go.sancus.dev/config/flags/cobra v0.1.0
-	go.sancus.dev/config/yaml v0.1.0
 	goshop.dev/headless v0.0.0-00010101000000-000000000000
+)
+
+require (
+	github.com/BurntSushi/toml v1.2.1 // indirect
+	github.com/darvaza-proxy/darvaza/acme v0.0.2 // indirect
 )
 
 require (
@@ -18,7 +22,6 @@ require (
 	github.com/cloudflare/tableflip v1.2.3 // indirect
 	github.com/creasty/defaults v1.7.0 // indirect
 	github.com/darvaza-proxy/core v0.6.1 // indirect
-	github.com/darvaza-proxy/darvaza/acme v0.0.2 // indirect
 	github.com/darvaza-proxy/darvaza/agent v0.1.2 // indirect
 	github.com/darvaza-proxy/darvaza/shared v0.4.3 // indirect
 	github.com/darvaza-proxy/slog/handlers/discard v0.3.1 // indirect
@@ -48,6 +51,5 @@ require (
 	golang.org/x/sys v0.6.0 // indirect
 	golang.org/x/text v0.8.0 // indirect
 	golang.org/x/tools v0.7.0 // indirect
-	gopkg.in/yaml.v3 v3.0.1 // indirect
 	mvdan.cc/sh/v3 v3.6.0 // indirect
 )

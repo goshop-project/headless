@@ -15,10 +15,13 @@ TMPDIR ?= $(CURDIR)/.tmp
 REVIVE ?= $(GOBIN)/revive
 REVIVE_CONF ?= $(TOOLSDIR)/revive.toml
 REVIVE_RUN_ARGS ?= -config $(REVIVE_CONF) -formatter friendly
+
 REVIVE_INSTALL_URL ?= github.com/mgechev/revive
+TOMLV_INSTALL_URL ?= github.com/BurntSushi/toml/cmd/tomlv
 
 GO_INSTALL_URLS = \
 	$(REVIVE_INSTALL_URL) \
+	$(TOMLV_INSTALL_URL) \
 
 GO_BUILD = $(GO) build -v
 GO_BUILD_CMD = $(GO_BUILD) -o $(TMPDIR)

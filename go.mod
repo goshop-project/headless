@@ -5,9 +5,9 @@ go 1.19
 require (
 	github.com/BurntSushi/toml v1.2.1
 	github.com/cloudflare/tableflip v1.2.3
-	github.com/darvaza-proxy/core v0.6.1
-	github.com/darvaza-proxy/darvaza/agent v0.1.2
-	github.com/darvaza-proxy/darvaza/shared v0.4.3
+	github.com/darvaza-proxy/core v0.6.5
+	github.com/darvaza-proxy/darvaza/agent v0.1.4
+	github.com/darvaza-proxy/darvaza/shared v0.4.6
 	github.com/darvaza-proxy/slog v0.4.6
 	github.com/darvaza-proxy/slog/handlers/discard v0.3.1
 	github.com/darvaza-proxy/slog/handlers/filter v0.3.1
@@ -22,7 +22,8 @@ require (
 	github.com/asaskevich/govalidator v0.0.0-20230301143203-a9d515a09cc2 // indirect
 	github.com/chavacava/garif v0.0.0-20230227094218-b8c73b2037b8 // indirect
 	github.com/creasty/defaults v1.7.0 // indirect
-	github.com/darvaza-proxy/darvaza/acme v0.0.2 // indirect
+	github.com/darvaza-proxy/darvaza/acme v0.0.4 // indirect
+	github.com/darvaza-proxy/middleware v0.0.5 // indirect
 	github.com/fatih/color v1.15.0 // indirect
 	github.com/fatih/structtag v1.2.0 // indirect
 	github.com/go-task/slim-sprig v0.0.0-20210107165309-348f09dbbbc0 // indirect
@@ -38,8 +39,8 @@ require (
 	github.com/onsi/ginkgo/v2 v2.9.1 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/quic-go/qpack v0.4.0 // indirect
-	github.com/quic-go/qtls-go1-19 v0.2.1 // indirect
-	github.com/quic-go/qtls-go1-20 v0.1.1 // indirect
+	github.com/quic-go/qtls-go1-19 v0.3.0 // indirect
+	github.com/quic-go/qtls-go1-20 v0.2.0 // indirect
 	github.com/quic-go/quic-go v0.33.0 // indirect
 	github.com/rivo/uniseg v0.4.4 // indirect
 	github.com/zeebo/blake3 v0.2.3 // indirect

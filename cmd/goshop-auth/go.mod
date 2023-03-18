@@ -14,16 +14,17 @@ require (
 
 require (
 	github.com/BurntSushi/toml v1.2.1 // indirect
-	github.com/darvaza-proxy/darvaza/acme v0.0.2 // indirect
+	github.com/darvaza-proxy/darvaza/acme v0.0.4 // indirect
 )
 
 require (
 	github.com/asaskevich/govalidator v0.0.0-20230301143203-a9d515a09cc2 // indirect
 	github.com/cloudflare/tableflip v1.2.3 // indirect
 	github.com/creasty/defaults v1.7.0 // indirect
-	github.com/darvaza-proxy/core v0.6.1 // indirect
-	github.com/darvaza-proxy/darvaza/agent v0.1.2 // indirect
-	github.com/darvaza-proxy/darvaza/shared v0.4.3 // indirect
+	github.com/darvaza-proxy/core v0.6.5 // indirect
+	github.com/darvaza-proxy/darvaza/agent v0.1.4 // indirect
+	github.com/darvaza-proxy/darvaza/shared v0.4.6 // indirect
+	github.com/darvaza-proxy/middleware v0.0.5 // indirect
 	github.com/darvaza-proxy/slog/handlers/discard v0.3.1 // indirect
 	github.com/darvaza-proxy/slog/handlers/filter v0.3.1 // indirect
 	github.com/darvaza-proxy/slog/handlers/zerolog v0.3.2 // indirect
@@ -36,11 +37,12 @@ require (
 	github.com/mattn/go-isatty v0.0.17 // indirect
 	github.com/onsi/ginkgo/v2 v2.9.1 // indirect
 	github.com/quic-go/qpack v0.4.0 // indirect
-	github.com/quic-go/qtls-go1-19 v0.2.1 // indirect
-	github.com/quic-go/qtls-go1-20 v0.1.1 // indirect
+	github.com/quic-go/qtls-go1-19 v0.3.0 // indirect
+	github.com/quic-go/qtls-go1-20 v0.2.0 // indirect
 	github.com/quic-go/quic-go v0.33.0 // indirect
 	github.com/rs/zerolog v1.29.0 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
+	github.com/stretchr/testify v1.8.2 // indirect
 	github.com/zeebo/blake3 v0.2.3 // indirect
 	go.sancus.dev/config/expand v0.1.0 // indirect
 	go.sancus.dev/core v0.18.2 // indirect

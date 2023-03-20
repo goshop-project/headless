@@ -5,6 +5,7 @@ go 1.19
 replace (
 	goshop.dev/headless => ../../
 	goshop.dev/headless/pkg/config => ../../pkg/config/
+	goshop.dev/headless/pkg/server => ../../pkg/server/
 )
 
 require (
@@ -12,8 +13,8 @@ require (
 	github.com/spf13/cobra v1.6.1
 	go.sancus.dev/config v0.11.0
 	go.sancus.dev/config/flags/cobra v0.1.0
-	goshop.dev/headless v0.0.0-00010101000000-000000000000
 	goshop.dev/headless/pkg/config v0.0.0-00010101000000-000000000000
+	goshop.dev/headless/pkg/server v0.0.0-00010101000000-000000000000
 )
 
 require (

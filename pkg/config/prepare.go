@@ -26,6 +26,14 @@ func SetDefaults(v any) error {
 	return defaults.Set(v)
 }
 
+// Prepare runs SetDefaults and Validate
+func Prepare(v any) error {
+	if err := SetDefaults(v); err != nil {
+		return err
+	}
+	return Validate(v)
+}
+
 func init() {
 	validate = validator.New()
 }

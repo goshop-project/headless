@@ -13,7 +13,7 @@ require (
 	github.com/spf13/cobra v1.6.1
 	go.sancus.dev/config v0.11.0
 	go.sancus.dev/config/flags/cobra v0.1.0
-	goshop.dev/headless/pkg/config v0.0.0-00010101000000-000000000000
+	goshop.dev/headless/pkg/config v0.0.1
 	goshop.dev/headless/pkg/server v0.0.0-00010101000000-000000000000
 )
 
@@ -24,10 +24,8 @@ require (
 
 require (
 	github.com/amery/defaults v0.0.1 // indirect
-	github.com/asaskevich/govalidator v0.0.0-20230301143203-a9d515a09cc2 // indirect
 	github.com/cloudflare/tableflip v1.2.3 // indirect
-	github.com/creasty/defaults v1.7.0 // indirect
-	github.com/darvaza-proxy/core v0.6.5 // indirect
+	github.com/darvaza-proxy/core v0.7.1 // indirect
 	github.com/darvaza-proxy/darvaza/agent v0.1.4 // indirect
 	github.com/darvaza-proxy/darvaza/shared v0.4.6 // indirect
 	github.com/darvaza-proxy/middleware v0.0.5 // indirect
@@ -56,7 +54,7 @@ require (
 	go.sancus.dev/config/expand v0.1.0 // indirect
 	go.sancus.dev/core v0.18.2 // indirect
 	golang.org/x/crypto v0.7.0 // indirect
-	golang.org/x/exp v0.0.0-20230315142452-642cacee5cc0 // indirect
+	golang.org/x/exp v0.0.0-20230321023759-10a507213a29 // indirect
 	golang.org/x/mod v0.9.0 // indirect
 	golang.org/x/net v0.8.0 // indirect
 	golang.org/x/sys v0.6.0 // indirect

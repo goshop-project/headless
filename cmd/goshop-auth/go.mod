@@ -22,6 +22,7 @@ require (
 )
 
 require (
+	github.com/amery/defaults v0.0.1 // indirect
 	github.com/asaskevich/govalidator v0.0.0-20230301143203-a9d515a09cc2 // indirect
 	github.com/cloudflare/tableflip v1.2.3 // indirect
 	github.com/creasty/defaults v1.7.0 // indirect

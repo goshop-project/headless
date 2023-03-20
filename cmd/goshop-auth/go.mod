@@ -32,11 +32,15 @@ require (
 	github.com/darvaza-proxy/slog/handlers/discard v0.3.1 // indirect
 	github.com/darvaza-proxy/slog/handlers/filter v0.3.1 // indirect
 	github.com/darvaza-proxy/slog/handlers/zerolog v0.3.2 // indirect
+	github.com/go-playground/locales v0.14.1 // indirect
+	github.com/go-playground/universal-translator v0.18.1 // indirect
+	github.com/go-playground/validator/v10 v10.12.0 // indirect
 	github.com/go-task/slim-sprig v0.0.0-20210107165309-348f09dbbbc0 // indirect
 	github.com/golang/mock v1.6.0 // indirect
 	github.com/google/pprof v0.0.0-20230309165930-d61513b1440d // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/klauspost/cpuid/v2 v2.2.4 // indirect
+	github.com/leodido/go-urn v1.2.2 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
 	github.com/mattn/go-isatty v0.0.17 // indirect
 	github.com/onsi/ginkgo/v2 v2.9.1 // indirect
@@ -46,7 +50,6 @@ require (
 	github.com/quic-go/quic-go v0.33.0 // indirect
 	github.com/rs/zerolog v1.29.0 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
-	github.com/stretchr/testify v1.8.2 // indirect
 	github.com/zeebo/blake3 v0.2.3 // indirect
 	go.sancus.dev/config/expand v0.1.0 // indirect
 	go.sancus.dev/core v0.18.2 // indirect

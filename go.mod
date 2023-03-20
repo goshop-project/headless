@@ -15,7 +15,6 @@ require (
 	github.com/mgechev/revive v1.3.1
 	github.com/rs/zerolog v1.29.0
 	go.sancus.dev/config v0.11.0
-	go.sancus.dev/config/expand v0.1.0
 )
 
 require (
@@ -52,5 +51,4 @@ require (
 	golang.org/x/sys v0.6.0 // indirect
 	golang.org/x/text v0.8.0 // indirect
 	golang.org/x/tools v0.7.0 // indirect
-	mvdan.cc/sh/v3 v3.6.0 // indirect
 )

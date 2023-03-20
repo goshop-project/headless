@@ -2,7 +2,10 @@ module goshop.dev/headless/cmd/goshop-auth
 
 go 1.19
 
-replace goshop.dev/headless => ../../
+replace (
+	goshop.dev/headless => ../../
+	goshop.dev/headless/pkg/config => ../../pkg/config/
+)
 
 require (
 	github.com/darvaza-proxy/slog v0.4.6
@@ -10,6 +13,7 @@ require (
 	go.sancus.dev/config v0.11.0
 	go.sancus.dev/config/flags/cobra v0.1.0
 	goshop.dev/headless v0.0.0-00010101000000-000000000000
+	goshop.dev/headless/pkg/config v0.0.0-00010101000000-000000000000
 )
 
 require (

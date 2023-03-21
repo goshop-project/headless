@@ -3,7 +3,7 @@ module goshop.dev/headless/cmd/goshop-auth
 go 1.19
 
 replace (
-	goshop.dev/headless => ../../
+	goshop.dev/headless/pkg/auth => ../../pkg/auth/
 	goshop.dev/headless/pkg/config => ../../pkg/config/
 	goshop.dev/headless/pkg/server => ../../pkg/server/
 )

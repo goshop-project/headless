@@ -8,7 +8,8 @@ import (
 
 	"github.com/darvaza-proxy/slog"
 	"github.com/darvaza-proxy/slog/handlers/discard"
-	"go.sancus.dev/config"
+
+	"goshop.dev/headless/pkg/config"
 )
 
 // Config represents the generic configuration for goshop servers
@@ -79,7 +80,7 @@ func (cfg *Config) SetDefaults() error {
 
 // Validate tells if the configuration is worth a try
 func (cfg *Config) Validate() error {
-	_, err := config.Validate(cfg)
+	err := config.Validate(cfg)
 	if err != nil {
 		return err
 	}

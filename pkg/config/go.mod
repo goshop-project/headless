@@ -4,7 +4,7 @@ go 1.19
 
 require (
 	github.com/BurntSushi/toml v1.2.1
-	github.com/amery/defaults v0.0.1
+	github.com/amery/defaults v0.1.0
 	github.com/go-playground/validator/v10 v10.12.0
 	go.sancus.dev/config/expand v0.1.0
 )

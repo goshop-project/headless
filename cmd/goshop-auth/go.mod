@@ -23,7 +23,7 @@ require (
 )
 
 require (
-	github.com/amery/defaults v0.0.1 // indirect
+	github.com/amery/defaults v0.1.0 // indirect
 	github.com/cloudflare/tableflip v1.2.3 // indirect
 	github.com/darvaza-proxy/core v0.7.1 // indirect
 	github.com/darvaza-proxy/darvaza/agent v0.1.4 // indirect

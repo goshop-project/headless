@@ -19,7 +19,7 @@ require (
 
 require (
 	github.com/BurntSushi/toml v1.2.1 // indirect
-	github.com/amery/defaults v0.0.1 // indirect
+	github.com/amery/defaults v0.1.0 // indirect
 	github.com/darvaza-proxy/darvaza/acme v0.0.4 // indirect
 	github.com/darvaza-proxy/middleware v0.0.5 // indirect
 	github.com/go-playground/locales v0.14.1 // indirect

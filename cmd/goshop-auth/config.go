@@ -25,9 +25,9 @@ func (cfg *Config) WriteTo(f io.Writer) (int64, error) {
 	return config.WriteTo(f, cfg)
 }
 
-// SetDefaults fills any gap in the Config
-func (cfg *Config) SetDefaults() error {
-	return cfg.Server.SetDefaults()
+// Prepare fills any gap in the Config and validate its content
+func (cfg *Config) Prepare() error {
+	return config.Prepare(cfg)
 }
 
 // Command

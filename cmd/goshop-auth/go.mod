@@ -14,7 +14,7 @@ require (
 	go.sancus.dev/config v0.11.0
 	go.sancus.dev/config/flags/cobra v0.1.0
 	goshop.dev/headless/pkg/config v0.0.2
-	goshop.dev/headless/pkg/server v0.0.0-00010101000000-000000000000
+	goshop.dev/headless/pkg/server v0.0.2
 )
 
 require (
@@ -25,7 +25,7 @@ require (
 require (
 	github.com/amery/defaults v0.1.0 // indirect
 	github.com/cloudflare/tableflip v1.2.3 // indirect
-	github.com/darvaza-proxy/core v0.7.1 // indirect
+	github.com/darvaza-proxy/core v0.7.3 // indirect
 	github.com/darvaza-proxy/darvaza/agent v0.1.4 // indirect
 	github.com/darvaza-proxy/darvaza/shared v0.4.6 // indirect
 	github.com/darvaza-proxy/middleware v0.0.5 // indirect
@@ -35,15 +35,15 @@ require (
 	github.com/go-playground/locales v0.14.1 // indirect
 	github.com/go-playground/universal-translator v0.18.1 // indirect
 	github.com/go-playground/validator/v10 v10.12.0 // indirect
-	github.com/go-task/slim-sprig v0.0.0-20210107165309-348f09dbbbc0 // indirect
+	github.com/go-task/slim-sprig v0.0.0-20230315185526-52ccab3ef572 // indirect
 	github.com/golang/mock v1.6.0 // indirect
-	github.com/google/pprof v0.0.0-20230309165930-d61513b1440d // indirect
+	github.com/google/pprof v0.0.0-20230323073829-e72429f035bd // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/klauspost/cpuid/v2 v2.2.4 // indirect
 	github.com/leodido/go-urn v1.2.2 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
-	github.com/mattn/go-isatty v0.0.17 // indirect
-	github.com/onsi/ginkgo/v2 v2.9.1 // indirect
+	github.com/mattn/go-isatty v0.0.18 // indirect
+	github.com/onsi/ginkgo/v2 v2.9.2 // indirect
 	github.com/quic-go/qpack v0.4.0 // indirect
 	github.com/quic-go/qtls-go1-19 v0.3.0 // indirect
 	github.com/quic-go/qtls-go1-20 v0.2.0 // indirect

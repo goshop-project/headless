@@ -14,7 +14,7 @@ require (
 	github.com/darvaza-proxy/slog/handlers/filter v0.3.1
 	github.com/darvaza-proxy/slog/handlers/zerolog v0.3.2
 	github.com/rs/zerolog v1.29.0
-	goshop.dev/headless/pkg/config v0.0.1
+	goshop.dev/headless/pkg/config v0.0.2
 )
 
 require (

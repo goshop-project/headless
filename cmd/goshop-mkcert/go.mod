@@ -4,6 +4,7 @@ go 1.19
 
 replace (
 	goshop.dev/headless/pkg/config => ../../pkg/config/
+	goshop.dev/headless/pkg/mkcert => ../../pkg/mkcert/
 	goshop.dev/headless/pkg/server => ../../pkg/server/
 )
 
@@ -26,11 +27,13 @@ replace (
 )
 
 require (
+	darvaza.org/core v0.9.2
 	darvaza.org/slog v0.5.1
 	github.com/spf13/cobra v1.7.0
 	go.sancus.dev/config v0.11.0
 	go.sancus.dev/config/flags/cobra v0.1.0
 	goshop.dev/headless/pkg/config v0.0.3
+	goshop.dev/headless/pkg/mkcert v0.1.0
 	goshop.dev/headless/pkg/server v0.1.1
 )
 
@@ -38,8 +41,9 @@ require github.com/BurntSushi/toml v1.2.1 // indirect
 
 require (
 	darvaza.org/acmefy v0.4.2 // indirect
+	darvaza.org/acmefy/pkg/ca v0.1.0 // indirect
 	darvaza.org/acmefy/pkg/magic v0.0.0-00010101000000-000000000000 // indirect
-	darvaza.org/core v0.9.2 // indirect
+	darvaza.org/acmefy/pkg/respond v0.1.0 // indirect
 	darvaza.org/darvaza/acme v0.1.1 // indirect
 	darvaza.org/darvaza/agent v0.2.2 // indirect
 	darvaza.org/darvaza/shared v0.5.1 // indirect

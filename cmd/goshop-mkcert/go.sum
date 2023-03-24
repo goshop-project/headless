@@ -36,6 +36,8 @@ cloud.google.com/go/storage v1.5.0/go.mod h1:tpKbwo567HUNpVclU5sGELwQWBDZ8gh0Zeo
 cloud.google.com/go/storage v1.6.0/go.mod h1:N7U0C8pVQ/+NIKOBQyamJIeKQKkZ+mxpohlUTyfDhBk=
 cloud.google.com/go/storage v1.8.0/go.mod h1:Wv1Oy7z6Yz3DshWRJFhqM/UCfaWIRTdp0RXyy7KQOVs=
 cloud.google.com/go/storage v1.10.0/go.mod h1:FLPqc6j+Ki4BU591ie1oL6qBQGu2Bl/tZ9ullr3+Kg0=
+darvaza.org/acmefy/pkg/respond v0.1.0 h1:rNE6HwTqecXzztfnQfZSTaVRvLAcVvk+oxB3JlTR44I=
+darvaza.org/acmefy/pkg/respond v0.1.0/go.mod h1:p6yPxpu1fZrKFRaY8OK2x3wQRDuOmzT/Mjcb0HiVE68=
 darvaza.org/resolver v0.3.2 h1:dKaKtlWD7VJK4k0Xw5kfl//Aa5aO9oGQQ7eh4bB6b80=
 darvaza.org/resolver v0.3.2/go.mod h1:kw+rwZM7S6spkwo1vqxCOWLJc4jJGZ6J9rGqvgmwypI=
 darvaza.org/slog v0.5.1 h1:Ob8Lm5XbGOXrXilQktMhPLw3y6N99iMmeedCbtfGf8c=

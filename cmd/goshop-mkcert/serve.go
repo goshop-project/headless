@@ -20,8 +20,14 @@ var serveCmd = &cobra.Command{
 		// Logger
 		cfg.Server.Logger = log
 
+		// Prepare CA
+		ca, err := PrepareCA(&cfg.CA)
+		if err != nil {
+			return err
+		}
+
 		// Prepare server
-		srv, err := cfg.Server.New()
+		srv, err := cfg.Server.NewWithStore(ca)
 		if err != nil {
 			return err
 		}

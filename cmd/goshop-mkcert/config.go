@@ -7,12 +7,14 @@ import (
 	"github.com/spf13/cobra"
 
 	"goshop.dev/headless/pkg/config"
+	"goshop.dev/headless/pkg/mkcert"
 	"goshop.dev/headless/pkg/server"
 )
 
 // Config is the configuration structure of this microservice
 type Config struct {
 	Server server.Config `toml:"server"`
+	CA     mkcert.Config `toml:"mkcert"`
 }
 
 // ReadInFile loads the microservice configuration from a YAML file by name

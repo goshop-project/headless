@@ -7,11 +7,11 @@ replace goshop.dev/headless/pkg/config => ../config
 require (
 	darvaza.org/acmefy v0.2.1
 	darvaza.org/core v0.9.0
+	darvaza.org/darvaza/shared v0.5.0
 	goshop.dev/headless/pkg/config v0.0.2
 )
 
 require (
-	darvaza.org/darvaza/shared v0.5.0 // indirect
 	darvaza.org/slog v0.5.0 // indirect
 	github.com/BurntSushi/toml v1.2.1 // indirect
 	github.com/amery/defaults v0.1.0 // indirect

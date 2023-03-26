@@ -23,14 +23,15 @@ replace (
 )
 
 require (
+	darvaza.org/acmefy v0.4.2
 	darvaza.org/acmefy/pkg/ca v0.1.0
 	darvaza.org/core v0.9.2
 	darvaza.org/darvaza/shared v0.5.1
+	darvaza.org/middleware v0.2.2
 	goshop.dev/headless/pkg/config v0.0.3
 )
 
 require (
-	darvaza.org/acmefy v0.4.2 // indirect
 	darvaza.org/acmefy/pkg/respond v0.1.0 // indirect
 	darvaza.org/darvaza/shared/web v0.3.6 // indirect
 	darvaza.org/slog v0.5.1 // indirect

@@ -1,10 +1,10 @@
 package main
 
 import (
-	"net/http"
-
 	"go.sancus.dev/config/flags"
 	"go.sancus.dev/config/flags/cobra"
+
+	"goshop.dev/headless/pkg/mkcert"
 )
 
 // Command
@@ -15,13 +15,16 @@ var serveCmd = &cobra.Command{
 		flags.GetMapper(cmd.Flags()).Parse()
 	},
 	RunE: func(cmd *cobra.Command, args []string) error {
-		var r http.Handler
-
 		// Logger
 		cfg.Server.Logger = log
 
 		// Prepare CA
 		ca, err := PrepareCA(&cfg.CA)
+		if err != nil {
+			return err
+		}
+
+		r, err := mkcert.NewRouter(ca)
 		if err != nil {
 			return err
 		}

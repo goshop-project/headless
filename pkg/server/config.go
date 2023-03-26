@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/darvaza-proxy/darvaza/shared/storage"
 	"github.com/darvaza-proxy/slog"
 	"github.com/darvaza-proxy/slog/handlers/discard"
 
@@ -16,6 +17,7 @@ import (
 type Config struct {
 	Logger  slog.Logger     `toml:"-" valid:",required"`
 	Context context.Context `toml:"-"`
+	Store   storage.Store   `toml:"-"`
 
 	Name string `toml:"name" default:"nil.goshop.local" valid:"host,required"`
 
@@ -90,5 +92,9 @@ func (cfg *Config) Validate() error {
 		return fmt.Errorf("%s: %s", "Context", "can not be nil")
 	}
 
-	return cfg.TLS.Validate()
+	if cfg.Store == nil {
+		return cfg.TLS.Validate()
+	}
+
+	return nil
 }

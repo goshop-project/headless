@@ -4,6 +4,7 @@ import (
 	"crypto/x509"
 	"encoding/pem"
 	"errors"
+	"os"
 
 	"darvaza.org/acmefy/pkg/ca"
 	"darvaza.org/darvaza/shared/x509utils"
@@ -28,6 +29,52 @@ func (cfg *Config) NewCA() (*CA, error) {
 	}
 
 	return m, nil
+}
+
+// WriteKeyFile writes the CA's Private Key PEM encoded,
+// using the filename in the [Config.KeyFile]
+func (m *CA) WriteKeyFile() (string, error) {
+	filename, err := m.cfg.KeyFileName()
+	if err != nil {
+		return "", err
+	}
+
+	if err := m.cfg.MkRootDir(); err != nil {
+		return "", err
+	}
+
+	f, err := os.OpenFile(filename, os.O_WRONLY|os.O_CREATE|os.O_TRUNC,
+		DefaultKeyFilePermissions)
+	if err != nil {
+		return "", err
+	}
+	defer f.Close()
+
+	_, err = m.ca.WriteKey(f)
+	return filename, err
+}
+
+// WriteCertFile writes the CA's Certificate PEM encoded,
+// using the filename in the [Config.CertFile]
+func (m *CA) WriteCertFile() (string, error) {
+	filename, err := m.cfg.CertFileName()
+	if err != nil {
+		return "", err
+	}
+
+	if err := m.cfg.MkRootDir(); err != nil {
+		return "", err
+	}
+
+	f, err := os.OpenFile(filename, os.O_WRONLY|os.O_CREATE|os.O_TRUNC,
+		DefaultCertFilePermissions)
+	if err != nil {
+		return "", err
+	}
+	defer f.Close()
+
+	_, err = m.ca.WriteCert(f)
+	return filename, err
 }
 
 // LoadCA creates a new CA using [Config.KeyFile] and [Config.CertFile]

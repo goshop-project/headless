@@ -13,6 +13,15 @@ import (
 	"goshop.dev/headless/pkg/config"
 )
 
+const (
+	// DefaultKeyFilePermissions are the permissions used when creating the KeyFile
+	DefaultKeyFilePermissions os.FileMode = 0600
+	// DefaultCertFilePermissions are the permissions used when creating the CertFile
+	DefaultCertFilePermissions os.FileMode = 0644
+	// DefaultDirPermissions are the permissions used when creating the RootDir
+	DefaultDirPermissions os.FileMode = 0700
+)
+
 // Config is the configuration of a CA
 type Config struct {
 	// RootDir is the directory where key and cert are securely stored
@@ -94,6 +103,11 @@ func (cfg *Config) KeyFileName() (string, error) {
 func (cfg *Config) CertFileName() (string, error) {
 	fn := filepath.Join(cfg.RootDir, cfg.CertFile)
 	return fn, nil
+}
+
+// MkRootDir creates the [Config.RootDir] if it doesn't exist already
+func (cfg *Config) MkRootDir() error {
+	return os.MkdirAll(cfg.RootDir, DefaultDirPermissions)
 }
 
 var userAndHostname string

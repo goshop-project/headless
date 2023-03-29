@@ -32,6 +32,13 @@ func (cfg *Config) New() (*Server, error) {
 	return New(cfg)
 }
 
+// NewWithStore creates a new server using the given config and
+// a prebuilt tls Store
+func (cfg *Config) NewWithStore(s storage.Store) (*Server, error) {
+	cfg.Store = s
+	return New(cfg)
+}
+
 // New creates a new server using the given config
 func New(cfg *Config) (*Server, error) {
 	if cfg == nil {
@@ -47,15 +54,21 @@ func New(cfg *Config) (*Server, error) {
 	}
 
 	// TLS
-	sc := &simple.Config{
-		Logger: cfg.Logger,
-	}
+	s := cfg.Store
+	if s == nil {
+		var err error
 
-	s, err := sc.New(cfg.TLS.Key,
-		cfg.TLS.Cert,
-		cfg.TLS.Roots)
-	if err != nil {
-		return nil, err
+		sc := &simple.Config{
+			Logger: cfg.Logger,
+		}
+
+		s, err = sc.New(cfg.TLS.Key,
+			cfg.TLS.Cert,
+			cfg.TLS.Roots)
+
+		if err != nil {
+			return nil, err
+		}
 	}
 
 	return cfg.newServer(s)

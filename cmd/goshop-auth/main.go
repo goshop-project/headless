@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/darvaza-proxy/slog"
+	"darvaza.org/slog"
 	"github.com/spf13/cobra"
 
 	"goshop.dev/headless/pkg/server/zerolog"

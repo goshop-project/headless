@@ -2,9 +2,9 @@
 package zerolog
 
 import (
-	"github.com/darvaza-proxy/slog"
-	"github.com/darvaza-proxy/slog/handlers/filter"
-	"github.com/darvaza-proxy/slog/handlers/zerolog"
+	"darvaza.org/slog"
+	"darvaza.org/slog/handlers/filter"
+	"darvaza.org/slog/handlers/zerolog"
 )
 
 // NewLogger wraps a zerolog.Logger for slog with a given filter level

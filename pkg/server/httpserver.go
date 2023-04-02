@@ -3,7 +3,7 @@ package server
 import (
 	"net/http"
 
-	"github.com/darvaza-proxy/darvaza/agent/httpserver"
+	"darvaza.org/darvaza/agent/httpserver"
 )
 
 func (srv *Server) newHTTPServerConfig() *httpserver.Config {

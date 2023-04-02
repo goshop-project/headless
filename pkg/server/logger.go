@@ -1,6 +1,6 @@
 package server
 
-import "github.com/darvaza-proxy/slog"
+import "darvaza.org/slog"
 
 func (srv *Server) fatal(err error) slog.Logger {
 	l := srv.cfg.Logger.Fatal()

@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/darvaza-proxy/darvaza/shared/storage"
-	"github.com/darvaza-proxy/slog"
-	"github.com/darvaza-proxy/slog/handlers/discard"
+	"darvaza.org/darvaza/shared/storage"
+	"darvaza.org/slog"
+	"darvaza.org/slog/handlers/discard"
 
 	"goshop.dev/headless/pkg/config"
 )

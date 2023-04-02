@@ -1,7 +1,7 @@
 package server
 
 import (
-	"github.com/darvaza-proxy/darvaza/shared/net/bind"
+	"darvaza.org/darvaza/shared/net/bind"
 )
 
 // Listen listens to all needed ports

@@ -8,10 +8,10 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/darvaza-proxy/core"
-	"github.com/darvaza-proxy/darvaza/agent/httpserver"
-	"github.com/darvaza-proxy/darvaza/shared/storage"
-	"github.com/darvaza-proxy/darvaza/shared/storage/simple"
+	"darvaza.org/core"
+	"darvaza.org/darvaza/agent/httpserver"
+	"darvaza.org/darvaza/shared/storage"
+	"darvaza.org/darvaza/shared/storage/simple"
 )
 
 // A Server to run a node of a GoShop microservice

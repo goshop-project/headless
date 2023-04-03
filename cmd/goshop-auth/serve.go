@@ -5,7 +5,6 @@ import (
 
 	"go.sancus.dev/config/flags"
 	"go.sancus.dev/config/flags/cobra"
-	"goshop.dev/headless/pkg/server"
 )
 
 // Command
@@ -17,7 +16,6 @@ var serveCmd = &cobra.Command{
 	},
 	RunE: func(cmd *cobra.Command, args []string) error {
 		var r http.Handler
-		var srv *server.Server
 
 		// Logger
 		cfg.Server.Logger = log

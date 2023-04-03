@@ -64,7 +64,7 @@ func cobraInit() {
 
 		err := c.ReadInFile(cfgFile)
 		if err == nil {
-			if err = c.SetDefaults(); err != nil {
+			if err = c.Prepare(); err != nil {
 				fatal(err, "failed to validate")
 			}
 
@@ -81,7 +81,7 @@ func cobraInit() {
 	}
 
 	// didn't load, apply defaults
-	if err := cfg.SetDefaults(); err != nil {
+	if err := cfg.Prepare(); err != nil {
 		fatal(err, "failed to set config defaults")
 	}
 }

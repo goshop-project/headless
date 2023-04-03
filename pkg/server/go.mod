@@ -19,7 +19,7 @@ require (
 
 require (
 	darvaza.org/darvaza/acme v0.1.0 // indirect
-	darvaza.org/darvaza/shared/web v0.3.1 // indirect
+	darvaza.org/darvaza/shared/web v0.3.4 // indirect
 	darvaza.org/middleware v0.2.0 // indirect
 	github.com/BurntSushi/toml v1.2.1 // indirect
 	github.com/amery/defaults v0.1.0 // indirect

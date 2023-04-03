@@ -14,7 +14,7 @@ require (
 	go.sancus.dev/config v0.11.0
 	go.sancus.dev/config/flags/cobra v0.1.0
 	goshop.dev/headless/pkg/config v0.0.2
-	goshop.dev/headless/pkg/server v0.0.2
+	goshop.dev/headless/pkg/server v0.1.0
 )
 
 require github.com/BurntSushi/toml v1.2.1 // indirect
@@ -24,7 +24,7 @@ require (
 	darvaza.org/darvaza/acme v0.1.0 // indirect
 	darvaza.org/darvaza/agent v0.2.1 // indirect
 	darvaza.org/darvaza/shared v0.5.0 // indirect
-	darvaza.org/darvaza/shared/web v0.3.1 // indirect
+	darvaza.org/darvaza/shared/web v0.3.4 // indirect
 	darvaza.org/middleware v0.2.0 // indirect
 	darvaza.org/slog/handlers/discard v0.4.0 // indirect
 	darvaza.org/slog/handlers/filter v0.4.0 // indirect

@@ -11,6 +11,7 @@ GOBIN ?= $(GOPATH)/bin
 
 TOOLSDIR := $(CURDIR)/pkg/tools
 TMPDIR ?= $(CURDIR)/.tmp
+OUTDIR ?= $(TMPDIR)
 
 REVIVE ?= $(GOBIN)/revive
 REVIVE_CONF ?= $(TOOLSDIR)/revive.toml
@@ -24,7 +25,7 @@ GO_INSTALL_URLS = \
 	$(TOMLV_INSTALL_URL) \
 
 GO_BUILD = $(GO) build -v
-GO_BUILD_CMD = $(GO_BUILD) -o $(TMPDIR)
+GO_BUILD_CMD = $(GO_BUILD) -o $(OUTDIR)
 
 V = 0
 Q = $(if $(filter 1,$V),,@)

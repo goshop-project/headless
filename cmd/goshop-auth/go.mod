@@ -10,7 +10,7 @@ replace (
 
 require (
 	darvaza.org/slog v0.5.0
-	github.com/spf13/cobra v1.6.1
+	github.com/spf13/cobra v1.7.0
 	go.sancus.dev/config v0.11.0
 	go.sancus.dev/config/flags/cobra v0.1.0
 	goshop.dev/headless/pkg/config v0.0.3

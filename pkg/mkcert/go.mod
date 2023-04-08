@@ -8,7 +8,7 @@ require (
 	darvaza.org/acmefy/pkg/ca v0.1.0
 	darvaza.org/core v0.9.2
 	darvaza.org/darvaza/shared v0.5.1
-	goshop.dev/headless/pkg/config v0.0.2
+	goshop.dev/headless/pkg/config v0.0.3
 )
 
 require (

@@ -14,7 +14,7 @@ require (
 	go.sancus.dev/config v0.11.0
 	go.sancus.dev/config/flags/cobra v0.1.0
 	goshop.dev/headless/pkg/config v0.0.3
-	goshop.dev/headless/pkg/server v0.1.0
+	goshop.dev/headless/pkg/server v0.1.1
 )
 
 require github.com/BurntSushi/toml v1.2.1 // indirect

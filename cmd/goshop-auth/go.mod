@@ -9,7 +9,7 @@ replace (
 )
 
 require (
-	darvaza.org/slog v0.5.0
+	darvaza.org/slog v0.5.1
 	github.com/spf13/cobra v1.7.0
 	go.sancus.dev/config v0.11.0
 	go.sancus.dev/config/flags/cobra v0.1.0
@@ -25,7 +25,7 @@ require (
 	darvaza.org/darvaza/agent v0.2.2 // indirect
 	darvaza.org/darvaza/shared v0.5.1 // indirect
 	darvaza.org/darvaza/shared/web v0.3.6 // indirect
-	darvaza.org/middleware v0.2.1 // indirect
+	darvaza.org/middleware v0.2.2 // indirect
 	darvaza.org/slog/handlers/discard v0.4.0 // indirect
 	darvaza.org/slog/handlers/filter v0.4.0 // indirect
 	darvaza.org/slog/handlers/zerolog v0.4.0 // indirect

@@ -8,7 +8,7 @@ require (
 	darvaza.org/core v0.9.2
 	darvaza.org/darvaza/agent v0.2.2
 	darvaza.org/darvaza/shared v0.5.1
-	darvaza.org/slog v0.5.0
+	darvaza.org/slog v0.5.1
 	darvaza.org/slog/handlers/discard v0.4.0
 	darvaza.org/slog/handlers/filter v0.4.0
 	darvaza.org/slog/handlers/zerolog v0.4.0
@@ -20,7 +20,7 @@ require (
 require (
 	darvaza.org/darvaza/acme v0.1.1 // indirect
 	darvaza.org/darvaza/shared/web v0.3.6 // indirect
-	darvaza.org/middleware v0.2.1 // indirect
+	darvaza.org/middleware v0.2.2 // indirect
 	github.com/BurntSushi/toml v1.2.1 // indirect
 	github.com/amery/defaults v0.1.0 // indirect
 	github.com/go-logr/logr v1.2.4 // indirect

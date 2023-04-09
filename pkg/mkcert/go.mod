@@ -12,10 +12,10 @@ require (
 )
 
 require (
-	darvaza.org/acmefy v0.4.1 // indirect
+	darvaza.org/acmefy v0.4.2 // indirect
 	darvaza.org/acmefy/pkg/respond v0.1.0 // indirect
 	darvaza.org/darvaza/shared/web v0.3.6 // indirect
-	darvaza.org/slog v0.5.0 // indirect
+	darvaza.org/slog v0.5.1 // indirect
 	github.com/BurntSushi/toml v1.2.1 // indirect
 	github.com/amery/defaults v0.1.0 // indirect
 	github.com/go-jose/go-jose/v3 v3.0.0 // indirect

@@ -24,6 +24,7 @@ replace (
 )
 
 require (
+	darvaza.org/acmefy/pkg/client v0.0.0-00010101000000-000000000000
 	darvaza.org/core v0.9.2
 	darvaza.org/darvaza/agent v0.2.2
 	darvaza.org/darvaza/shared v0.5.1
@@ -37,11 +38,13 @@ require (
 )
 
 require (
+	darvaza.org/acmefy v0.4.2 // indirect
 	darvaza.org/darvaza/acme v0.1.1 // indirect
 	darvaza.org/darvaza/shared/web v0.3.6 // indirect
 	darvaza.org/middleware v0.2.2 // indirect
 	github.com/BurntSushi/toml v1.2.1 // indirect
 	github.com/amery/defaults v0.1.0 // indirect
+	github.com/go-jose/go-jose/v3 v3.0.0 // indirect
 	github.com/go-playground/locales v0.14.1 // indirect
 	github.com/go-playground/universal-translator v0.18.1 // indirect
 	github.com/go-playground/validator/v10 v10.12.0 // indirect

@@ -45,11 +45,12 @@ type TLSConfig struct {
 	Key   string `toml:"key"`
 	Cert  string `toml:"cert"`
 	Roots string `toml:"caroot"`
+	ACME  string `toml:"acme,omitempty" validate:"url"`
 }
 
 // Validate tells if the configuration is worth a try
 func (c *TLSConfig) Validate() error {
-	if c.Key != "" || c.Cert != "" || c.Roots != "" {
+	if c.Key != "" || c.Cert != "" || c.Roots != "" || c.ACME != "" {
 		return nil
 	}
 	return errors.New("missing TLS information")

@@ -8,6 +8,7 @@ import (
 	"sync/atomic"
 	"time"
 
+	"darvaza.org/acmefy/pkg/client/magic"
 	"darvaza.org/core"
 	"darvaza.org/darvaza/agent/httpserver"
 	"darvaza.org/darvaza/shared/storage"
@@ -41,37 +42,63 @@ func (cfg *Config) NewWithStore(s storage.Store) (*Server, error) {
 
 // New creates a new server using the given config
 func New(cfg *Config) (*Server, error) {
+	var err error
+
 	if cfg == nil {
 		cfg = &Config{}
 
-		if err := cfg.SetDefaults(); err != nil {
+		if err = cfg.SetDefaults(); err != nil {
 			return nil, err
 		}
 	}
 
-	if err := cfg.Validate(); err != nil {
+	if err = cfg.Validate(); err != nil {
 		return nil, err
 	}
 
 	// TLS
 	s := cfg.Store
 	if s == nil {
-		var err error
-
-		sc := &simple.Config{
-			Logger: cfg.Logger,
-		}
-
-		s, err = sc.New(cfg.TLS.Key,
-			cfg.TLS.Cert,
-			cfg.TLS.Roots)
-
+		s, err = newTLSStore(cfg)
 		if err != nil {
 			return nil, err
 		}
 	}
 
 	return cfg.newServer(s)
+}
+
+func newTLSStore(cfg *Config) (storage.Store, error) {
+	if cfg.TLS.ACME == "" {
+		sc := &simple.Config{
+			Logger: cfg.Logger,
+		}
+
+		s, err := sc.New(cfg.TLS.Key,
+			cfg.TLS.Cert,
+			cfg.TLS.Roots)
+
+		return s, err
+	}
+
+	sc := &magic.Config{
+		URL:    cfg.TLS.ACME,
+		Logger: cfg.Logger,
+		Key:    cfg.TLS.Key,
+		Cert:   cfg.TLS.Cert,
+		Roots:  cfg.TLS.Roots,
+	}
+
+	s, err := sc.New()
+	if err == nil {
+		err = s.Start()
+	}
+
+	if err != nil {
+		return nil, err
+	}
+
+	return s, nil
 }
 
 func (cfg *Config) newServer(s storage.Store) (*Server, error) {

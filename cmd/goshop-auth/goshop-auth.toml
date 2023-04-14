@@ -5,6 +5,7 @@
     graceful_timeout = "5s"
     health_wait = "1s"
   [server.tls]
+    acme = "https://acme-staging-v02.api.letsencrypt.org/directory"
     key = "${TLS_KEY_FILE:-../../key.pem}"
     cert = "${TLS_CERT_FILE:-../../cert.pem}"
     caroot = "${TLS_CAROOT_FILE:-../../caroot.pem}"
